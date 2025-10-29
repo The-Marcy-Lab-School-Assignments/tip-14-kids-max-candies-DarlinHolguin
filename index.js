@@ -9,8 +9,13 @@
  * @param {number} extraCandies
  * @returns {boolean[]}
  */
-function kidsWithCandies(candies, extraCandies) {
+const kidsWithCandies = (candies, extraCandies) => {
+    let greatest = Math.max(...candies)
+    return candies.map((x) => x + extraCandies >= greatest)
+
+
+
 
 }
-
+kidsWithCandies([4, 5, 6], 30)
 module.exports = kidsWithCandies;
